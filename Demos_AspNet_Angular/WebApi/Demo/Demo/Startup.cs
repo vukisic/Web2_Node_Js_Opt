@@ -24,6 +24,7 @@ namespace Demo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Adding CORS
             services.AddCors();
             services.AddControllers();
         }
@@ -38,6 +39,7 @@ namespace Demo
 
             app.UseRouting();
 
+            // Define CORS Policy
             app.UseCors(x => x.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod());
             
             app.UseAuthorization();
