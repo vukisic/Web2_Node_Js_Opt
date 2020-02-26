@@ -1,0 +1,25 @@
+<div class="card container mt-2">
+  <div class="card-body">
+    <h5 class="card-title">TimeStamp</h5>
+    <h6 class="card-subtitle mb-2 text-muted">TimeStamp Demp</h6>
+    <label for="param">Param:</label>
+    <div class="row">
+      <div class="col-md-8">
+        <input [(ngModel)]="param" type="text" id="param" class="form-control">
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-outline-success" (click)="sendReq()">Send Request</button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <h6>Responese: </h6>
+      </div>
+      <div class="col-md-8">
+        <p>{{response}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
