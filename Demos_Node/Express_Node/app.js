@@ -1,4 +1,6 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
 
 app.set("view engine", "ejs"); // setting up template engine (like Razor in ASP.NET)
@@ -21,6 +23,15 @@ app.get("/student/:id", (req, res) => {
     subjects: ["Web2", "BP2", "Grafika"]
   };
   res.render("student", { student: data }); // serving (rendering) files using view engine (default path views/<viewname>)
+});
+
+// POST requests
+
+// create application/x-www-form-urlencoded parser
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+app.post("/contact", urlencodedParser, (req, res) => {
+  res.send(`You have sent: ${JSON.stringify(req.body)}`);
 });
 
 // Listen
