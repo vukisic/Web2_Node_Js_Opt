@@ -3,7 +3,19 @@ Optional assignment for subject Web2
 
 # Manual
 
+## Prerequisites
+- [Node.js](https://nodejs.org/en/)
+- [Angular CLI](https://cli.angular.io/)
+- [ASP.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Visual Studio / VS Code](https://visualstudio.microsoft.com/)
+
 ## Run Code
+
+### NodeDemo
+
+#### Run
+
+To start <filename>.js type node <filename> in cmd/terminal (ex. node console_example.js for file console_example.js)
 
 ### WebApiDemo
 
