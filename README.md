@@ -1,13 +1,13 @@
 # Web2_Node_Js_Opt
 Optional assignment for subject Web2
 
-# Manual
-
-## Prerequisites
+# Prerequisites
 - [Node.js](https://nodejs.org/en/)
 - [Angular CLI](https://cli.angular.io/)
 - [ASP.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - [Visual Studio / VS Code](https://visualstudio.microsoft.com/)
+
+# Manual
 
 ## Run Code
 
