@@ -14,7 +14,12 @@ app.get("/contact", (req, res) => {
 });
 
 app.get("/student/:id", (req, res) => {
-  let data = { age: 23, name: "Djura Djuric", id: req.params.id };
+  let data = {
+    age: 23,
+    name: "Djura Djuric",
+    id: req.params.id,
+    subjects: ["Web2", "BP2", "Grafika"]
+  };
   res.render("student", { student: data }); // serving (rendering) files using view engine (default path views/<viewname>)
 });
 

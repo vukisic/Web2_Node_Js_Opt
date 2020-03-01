@@ -6,9 +6,19 @@
     <title>Student</title>
   </head>
   <body>
+    <%- include('partials/nav') %>
+
     <h1>Student</h1>
+
     <p><b>Id</b>: <%= student.id %></p>
     <p><b>Age</b>: <%= student.age %></p>
     <p><b>Name</b>: <%= student.name %></p>
+
+    <h2>Subjects:</h2>
+    <ul>
+      <% student.subjects.forEach(function(item){ %>
+      <li><%= item %></li>
+      <% }); %>
+    </ul>
   </body>
 </html>
