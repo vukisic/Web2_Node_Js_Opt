@@ -45,6 +45,19 @@ Optional assignment for subject Web2
    Built upon that same interface is the cluster module, 
    which allows you to share sockets between processes to enable load balancing 
    over your cores.
+
+## Event-loop
+Whenever we run a Node program, a thread is automatically created. This thread is the only place where our entire codebase is going to be executed. Inside of it, something called the event loop is generated. The role of this loop is to schedule which operations our only thread should be performing at any given point in time.
+
+For every loop iteration, we can distinguish the following phases:
+
+- `Phase 1`: Node looks at its inner collection of pending timers and checks which callback functions passed to setTimeout() and setInterval() are ready to be called in case of an expired timer.
+- `Phase 2`: Node looks at its inner collection of pending OS tasks and checks which callback functions are ready to be called. An example of this could be the completed retrieval of a file from our machine’s hard drive.
+- `Phase 3`: Node pauses its execution waiting for new events to occur. With new events, we include: a new timer completion, a new OS task completion, a new pending operation completion.
+- `Phase 4`: Node checks if any function related to pending timers related to the setImmediate() function are ready to be called.
+- `Phase 5`: Manage close events, used to clean the state of our application.
+
+
  
 ## Example of request handeling(PHP/ASP vs Node)
 Here is how `PHP or ASP` handles a file request:
